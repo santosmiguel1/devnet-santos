@@ -1,7 +1,7 @@
 """
 Module 2 — Activity: File Sorting with os and shutil
-Student: [your name]
-Date: [date]
+Student: [Santos, Miguel]
+Date: [9/29/26]
 
 ============================================
 WHAT DID YOU BUILD? (explain in your own words)
@@ -30,7 +30,32 @@ Paste the code you already wrote for this activity below.
 import os
 import shutil
 
-# --- paste your existing code here ---
+source_folder = "module-2-python-basics/file-sorting-test"
+
+images_folder = os.path.join(source_folder, "Images")
+documents_folder = os.path.join(source_folder, "Documents")
+music_folder = os.path.join(source_folder, "Music")
+
+os.makedirs(images_folder, exist_ok=True)
+os.makedirs(documents_folder, exist_ok=True)
+os.makedirs(music_folder, exist_ok=True)
+
+for file_name in os.listdir(source_folder):
+    file_path = os.path.join(source_folder, file_name)
+
+    if os.path.isfile(file_path):
+        extension = os.path.splitext(file_name)[1].lower()
+
+        if extension in [".jpg", ".jpeg", ".png", ".gif"]:
+            shutil.move(file_path, images_folder)
+
+        elif extension in [".pdf", ".txt", ".docx"]:
+            shutil.move(file_path, documents_folder)
+
+        elif extension in [".mp3", ".wav"]:
+            shutil.move(file_path, music_folder)
+
+print("Files have been sorted!")
 
 
 """
