@@ -6,18 +6,23 @@ Date: [9/29/26]
 ============================================
 WHAT DID YOU BUILD? (explain in your own words)
 ============================================
-[Paste your working script below first, then come back and explain
-it here: what does your script do, and what rule did you use to
-sort the files? e.g. by extension, by name, by date, etc.]
+sorts files into folders based on their file extensions
+folder so Python can find and organize the files
+correctly
 
 
 ============================================
 KEY VOCABULARY
 ============================================
-- os module:
-- shutil module:
-- file path:
-- directory:
+- os module: A Python module used to interact with files
+  and folders on the computer.
+- shutil module: A Python module used to move, copy, and
+  manage files.
+- file path: The ending of a filename that
+  identifies its file type, such as .jpg, .pdf, or .mp3.
+- directory: The folder containing the files
+  that the program will organize.
+
 (add more as needed)
 
 
@@ -62,9 +67,17 @@ print("Files have been sorted!")
 ============================================
 A MISTAKE I MADE (or one I want to avoid)
 ============================================
-[what tripped you up while building this? e.g. a path that didn't
-exist, a file that got overwritten, something that didn't work the
-way you expected at first]
+One mistake I made was using the wrong path for the
+file-sorting-test folder. I initially used
+"file-sorting-test" as the source folder, but my test
+folder was actually inside the module-2-python-basics
+folder.
+
+I fixed it by changing the path to
+"module-2-python-basics/file-sorting-test". This taught
+me that the file path needs to match the actual location
+of the folder so Python can find and organize the files
+correctly.
 
 
 ============================================
